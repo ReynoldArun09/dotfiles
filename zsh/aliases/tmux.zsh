@@ -1,0 +1,7 @@
+alias t="tmux"
+alias ta="tmux attach -t"
+alias td="tmux detach"
+alias tls="tmux ls"
+alias tk="tmux kill-server"
+alias tn="tmux new -s"
+alias tx="tmux kill-session -t"
