@@ -1,5 +1,5 @@
-
 mouse-hide-while-typing = true
+background-opacity = 0.80
 
 auto-update = check
 auto-update-channel = stable

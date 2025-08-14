@@ -1,21 +1,19 @@
 -- Set leader key
-vim.g.mapleader = ' '
-vim.g.maplocalleader = ' '
+vim.g.mapleader = " "
+vim.g.maplocalleader = " "
 
 local opts = { noremap = true, silent = true }
-vim.keymap.set({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true })
-
+vim.keymap.set({ "n", "v" }, "<Space>", "<Nop>", { silent = true })
 
 -- Neo tree
-vim.keymap.set("n", "<Leader>e", "<Cmd>Neotree toggle<CR>", {desc = "Toggle Neo-tree"})
+vim.keymap.set("n", "<Leader>e", "<Cmd>Neotree toggle<CR>", { desc = "Toggle Neo-tree" })
 vim.keymap.set("n", "<Leader>o", function()
- if vim.bo.filetype == "neo-tree" then
-	 vim.cmd.wincmd("p")
- else
-	 vim.cmd("Neotree focus")
- end
-end, {desc = "Focus Neo-tree"}
-)
+	if vim.bo.filetype == "neo-tree" then
+		vim.cmd.wincmd("p")
+	else
+		vim.cmd("Neotree focus")
+	end
+end, { desc = "Focus Neo-tree" })
 
 -- Save file
 vim.keymap.set("n", "<C-s>", "<cmd> w <CR>", opts)
@@ -56,13 +54,14 @@ vim.keymap.set("n", "]d", function()
 	vim.diagnostic.jump({ count = 1, float = true })
 end, { desc = "Go to next diagnostic message" })
 
-
 --ToggleTerm keymaps
-vim.keymap.set("n", "<Leader>tf", "<Cmd>ToggleTerm direction=float<CR>", {desc = "ToggleTerm float"})
+vim.keymap.set("n", "<Leader>tf", "<Cmd>ToggleTerm direction=float<CR>", { desc = "ToggleTerm float" })
 
-vim.keymap.set("n", "<Leader>th", "<Cmd>ToggleTerm size=10 direction=horizontal<CR>", {desc = "ToggleTerm Horizontal"})
+vim.keymap.set(
+	"n",
+	"<Leader>th",
+	"<Cmd>ToggleTerm size=10 direction=horizontal<CR>",
+	{ desc = "ToggleTerm Horizontal" }
+)
 
-vim.keymap.set("n", "<Leader>tv", "<Cmd>ToggleTerm size=80 direction=vertical<CR>", {desc = "ToggleTerm vertical"})
-
-
-
+vim.keymap.set("n", "<Leader>tv", "<Cmd>ToggleTerm size=80 direction=vertical<CR>", { desc = "ToggleTerm vertical" })
